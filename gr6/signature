@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% SIGNATURE %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+type_hierarchy
+bot
+  sign  phon:list  
+    expr  cat:cat  h_init:bool %!!!    
+      word  h_init:plus  arg_st:list  lex:lexeme %!!!
+      phrase  head_dtr:expr  nonh_dtr:expr  dtrs:list %!!!
+        ch_phrase %tech
+        ah_phrase %tech
+        hc_phrase %tech
+    lexeme %!!!
+      e_lex
+      nominal_lex  decl:decl  init:lexeme
+        noun_lex  plural:bool4  compl:list 
+        adj_lex
+        qnt_lex
+      verb_lex  preverbs:list  verb_val:verb_val  conj_class:conj_class    %obj in Cnj = minus plus na  %??? 
+  cat  head:head  val:val
+  head
+    verb  tense:tense
+    nominal  case:case   
+      npn  num:num  pers:pers
+        &poss_npn
+        arg_npn  case:arg_c  
+          &arg_noun
+        noun  pers:per3
+          arg_noun
+          &poss_noun
+      adjunct  case:adj_c  mod:ne_list 
+        poss_npn
+          poss_pn  case:non_cnst
+          poss_noun  case:cnst %tech, cnst
+        qnt   
+          qnt_i  case:non_cnst
+          qnt_  case:cnst
+        adj   
+          adj_i  case:non_cnst
+          adj_  case:cnst
+  val
+    frame  expl:list  impl:list
+    comps  spec:spec  comp:list 
+    &e_list
+  spec
+    unspec
+    specif
+      attrib
+      deter  %!!!
+        n_poss
+        pn_poss
+        pnp_q 
+        quant
+    non_deter %tech
+          &unspec
+          &attrib
+  case
+    arg_c
+      case_i
+        nom   % nominative   N-i
+        ins   % instrumental N-ith
+        gen   % genetive     N-is(si)
+        ori   % orientative  N-isken
+        abl1  % ablative1    N-idan
+        abl2  % ablative2    N-isgan
+        ben   % benefactive  N-isthvis
+      erg   % ergative     N-ma
+      case_
+        ine   % inessive     N-shi
+        dat   % dative       N-s
+        loc   % locative     N-ze
+        com   % comitative   N-than
+        adv   % adverbial    N-ad
+        ter   % antessive    N-amde
+    adj_c  
+      non_cnst
+        nom_c
+        dat_c
+        erg_c
+      cnst
+    cnst_i  %tech
+      &cnst
+      &case_i
+  verb_val  non_const_val:list  const_val:list %???
+  conj_class  conj_num:conj_num  conj_tense:tense  being:bool4  suffps:list  %???
+    dynamic  suff3pl:list  % suff3pl = anen;enen;anan;enan, suffps = eea;eeo;iia;iio   
+    static   % being = minus, suffps = eea;eeo;iia;?iio
+    stative  % suffps = e;i
+  conj_num
+    conj1
+    conj2
+    conj3
+  tense  preverb:list %???
+    prs
+    psc
+    pst  
+    fut
+  num
+    sing
+    plur
+  pers
+    per1
+    per2
+    per3
+  bool4
+    bool
+      plus
+      minus
+    both
+    na
+  list
+    e_list
+    ne_list  hd:bot  tl:list
+  decl 
+    decl_i
+    decl_e
+    decl_ou
+    decl_a  
+.

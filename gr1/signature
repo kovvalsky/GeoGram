@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% SIGNATURE %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+type_hierarchy
+bot
+  sign  phon:list  cat:cat  h_init:bool
+    expression    
+      word  h_init:plus
+      phrase  head_dtr:sign  nonh_dtr:sign  dtrs:list
+  cat  head:head  val:list
+  head
+    verb
+    noun  num:num  case:case  pers:per3    
+  case
+    nom   % nominative   N-i
+    ins   % instrumental N-ith
+    gen   % genetive     N-is(si)
+    ori   % orientative  N-isken
+    abl1  % ablative1    N-idan
+    abl2  % ablative2    N-isgan
+    ben   % benefactive  N-isthvis
+    erg   % ergative     N-ma
+    ine   % inessive     N-shi
+    dat   % dative       N-s
+    loc   % locative     N-ze
+    com   % comitative   N-than
+    adv   % adverbial    N-ad
+    ter   % antessive    N-amde
+  num
+    sing
+    plur
+  per3
+  bool
+    plus
+    minus
+  list
+    e_list
+    ne_list  hd:bot  tl:list
+.

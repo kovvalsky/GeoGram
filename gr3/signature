@@ -1,0 +1,72 @@
+% Signature
+
+type_hierarchy
+bot
+  sign  phon:list  cat:cat  h_init:bool
+    expression    
+      word  h_init:plus  arg_st:list
+      phrase  head_dtr:sign  nonh_dtr:sign  dtrs:list
+  cat  head:head  val:val
+  head
+    verb  tense:tense
+    nominal  case:case  %!!!  
+      npn  num:num  pers:pers  case:arg_c  %!!!   
+        noun  pers:per3  %!!!
+      adjunct  case:adj_c  mod:ne_list  %!!!
+        adj    %!!!
+          adj_i  case:n_cnst
+          adj_  case:cnst
+        qnt    %!!!
+          qnt_i  case:n_cnst
+          qnt_  case:cnst
+  val
+    frame  expl:list  impl:list
+    comps  spec:bool  %!!!  
+    &e_list  %!!!
+  case
+    arg_c  %!!!
+      case_i
+        nom   % nominative   N-i
+        ins   % instrumental N-ith
+        gen   % genetive     N-is(si)
+        ori   % orientative  N-isken
+        abl1  % ablative1    N-idan
+        abl2  % ablative2    N-isgan
+        ben   % benefactive  N-isthvis
+      erg   % ergative     N-ma
+      case_
+        ine   % inessive     N-shi
+        dat   % dative       N-s
+        loc   % locative     N-ze
+        com   % comitative   N-than
+        adv   % adverbial    N-ad
+        ter   % antessive    N-amde
+    adj_c  %!!!
+      n_cnst
+        nom_c
+        dat_c
+        erg_c
+      cnst
+  tense
+    prs
+    psc
+    pst  
+    fut
+  num
+    sing
+    plur
+  pers
+    per1
+    per2
+    per3
+  bool
+    plus
+    minus
+  list
+    e_list
+    ne_list  hd:bot  tl:list
+      %s_list  hd:bot  tl:e_list
+    %es_list  %!!!
+      %&s_list  %!!!
+      %&e_list  %!!!
+.

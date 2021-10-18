@@ -1,0 +1,89 @@
+% Signature
+
+type_hierarchy
+bot
+  sign  phon:list  cat:cat  h_init:bool
+    expression    
+      word  h_init:plus  arg_st:list
+      phrase  head_dtr:sign  nonh_dtr:sign  dtrs:list
+  cat  head:head  val:val
+  head
+    verb  tense:tense
+    nominal  case:case   
+      npn  num:num  pers:pers %!!!
+        &poss_npn %!!! 
+        arg_npn  case:arg_c %!!!     
+          &arg_noun %!!!
+        noun  pers:per3 %!!!
+          arg_noun  %!!!
+          &poss_noun  %!!!
+      adjunct  case:adj_c  mod:ne_list
+        %det  
+        poss_npn %!!!
+          poss_pn  case:non_cnst %!!!
+          poss_noun  case:cnst  %!!!
+        qnt   
+          qnt_i  case:non_cnst
+          qnt_  case:cnst
+        adj   
+          adj_i  case:non_cnst
+          adj_  case:cnst
+  val
+    frame  expl:list  impl:list
+    comps  spec:spec %!!! 
+    &e_list
+  spec %!!!
+    unspec
+    specif
+      attrib
+      bound
+        quant
+        n_poss
+        pn_poss
+        pq
+  case
+    arg_c
+      case_i
+        nom   % nominative   N-i
+        ins   % instrumental N-ith
+        gen   % genetive     N-is(si)
+        ori   % orientative  N-isken
+        abl1  % ablative1    N-idan
+        abl2  % ablative2    N-isgan
+        ben   % benefactive  N-isthvis
+      erg   % ergative     N-ma
+      case_
+        ine   % inessive     N-shi
+        dat   % dative       N-s
+        loc   % locative     N-ze
+        com   % comitative   N-than
+        adv   % adverbial    N-ad
+        ter   % antessive    N-amde
+    adj_c  
+      non_cnst
+        nom_c
+        dat_c
+        erg_c
+      cnst
+    cnst_i  %!!!
+      &cnst
+      &case_i
+  tense
+    prs
+    psc
+    pst  
+    fut
+  num
+    sing
+    plur
+  pers
+    per1
+    per2
+    per3
+  bool
+    plus
+    minus
+  list
+    e_list
+    ne_list  hd:bot  tl:list
+.
