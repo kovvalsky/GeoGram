@@ -1,8 +1,10 @@
 # GeoGram
 An HPSG-based Formal Grammar of a Core Fragment of Georgian Implemented in TRALE.
 This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf).
-The presentation sldies of the thesis are [here](docs/GeoGram-presentation.pdf).
-
+The presentation slides of the thesis are [here](docs/GeoGram-presentation.pdf).
+An animated visualization of the sampel parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
+<img src="img/chven_vdumvarth.gif" height="512"/>
+<img src="img/[chven,vdumvarth].png" height="512"/>
 
 # GeoGram versions
 GeoGram is presented as six nested grammars -- starting from the initial grammar `gr1` and ending with the final grammar `gr6`. The next version adds new components to the previous version.
@@ -12,7 +14,7 @@ Short descriptions and relations between these versions of GeoGram:
 * `gr1`: covers the verb complementation by nouns.
 * `gr2`: `gr1` + verb complementation by nouns and pronouns, distinction between explicit and implicit arguments modeling the polypersonal agreement and pro-drop properties.
 * `gr3`: `gr2` + adjunction of the noun by quantifiers and adjectives.
-* `gr4`: `gr3` + adjunction of the noun by noun and pronoun possesives.
+* `gr4`: `gr3` + adjunction of the noun by noun and pronoun possessives.
 * `gr5`: `gr4` + noun complementation by possessive phrases
 * `gr6`: `gr5` + nominalized quantifiers and adjectives, lexical rules for nominals - argument declension, adjunct declension, adjunct nominalization, pluralization and possessivization; and lexical rules for verbal conjugation - conjugation paradigm I, conjugation paradigm II and conjugation paradigm III.
 
@@ -20,11 +22,11 @@ Short descriptions and relations between these versions of GeoGram:
 
 
 # Installation
-Before you run the grammar, you need to isntall TRALE.
-TRALE is a system for parsing, logic programming and constraint resolution  with typed feature structures in a manner roughly consistent with their use in Head-driven Phrase Structure Grammar (HPSG).
+Before you run the grammar, you need to install TRALE.
+TRALE is a system for parsing, logic programming and constraint resolution with typed feature structures in a manner roughly consistent with their use in Head-driven Phrase Structure Grammar (HPSG).
 
-There are several ways to install TRALE depending depending on your machine and availability of a SICStus Prolog:
-* [TRALE download page](http://milca.sfs.uni-tuebingen.de/A4/Course/trale/) - this is considered as an official page, where you can find the lattes version of TRALE (at the time of writing this, it needs a Sicstus Prolog installation). This is most comprehensive but arguably the least easy way of installing TRALE.
+There are several ways to install TRALE depending on your machine and availability of a SICStus Prolog:
+* [TRALE download page](http://milca.sfs.uni-tuebingen.de/A4/Course/trale/) - this is considered as an official page, where you can find the lattes version of TRALE (at the time of writing this, it needs a Sicstus Prolog installation). This is the most comprehensive but arguably the least easy way of installing TRALE.
 * [Grammix](https://hpsg.hu-berlin.de/Software/Grammix/) - a bootable CD Rom that contains TRALE along with some sample grammars (e.g., it can be run on windows OS via Virtual Machines). This installation can be suitable for teaching.
 * [Standalone TRALE](https://hpsg.hu-berlin.de/Software/Trale/) - a version that does not need commercial Sicstus Prolog but does need Linux OS. This version of TRALE was used during the development of GeoGram.
 
@@ -33,7 +35,8 @@ More details about the installation (and running grammars) can be found in [this
 
 # Running the GeoGram grammar
 
-These command are tested on the standalone TRALE.
+These commands are tested on the standalone TRALE.
+
 Go to the directory where `theory.pl` of the grammar you want to run is located
 and execute TRALE with `s`hell mode, `g`raphical interface, and from stabnd`a`lone executable. 
 ```
@@ -57,11 +60,11 @@ All rights reserved
  ! ?-
  ```
 For the meaning of flags, run `trale -h`.
-Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface.
+Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface: <img src="img/Gralej_empty.png" height="50"/>
 ___
 Compile the grammar.
  ```
-  ! ?- c.
+ ! ?- c.
 Reading signature file...
 signature
 Compiling type unification...
@@ -107,8 +110,11 @@ Run the grammar on the test suite. It should pass all the tests (more than 1,000
 
 yes
 ```
+The screenshot shows all parsed phrases from the test suite: <img src="img/Gralej_test_all.png" height="50"/>
+
+You can select any phrase from the list and explore it: <img src="img/chven_vdumvarth.gif" height="150"/>
 ___
-Parse a custom phrase. Note that the `lexicon.pl` should cover the vocabulary of the pharse, otherwise parsing will obviously fail.
+Parse a custom phrase. Note that the `lexicon.pl` should cover the vocabulary of the phrase, otherwise parsing will fail.
 In the example, the grammar parses `my dog likes all women's some kid`.
 There is only one parse of the sentence found.
 ```
@@ -122,10 +128,10 @@ Do you want to try for more solutions? (return for <yes>) yes
 
 no
 ```
-This is the screenshot of the parse.
+This is the screenshot of the full parse tree: <img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>
 ___
-Now let's see an example of a phrase that has more than one parses.
-Parse `all wine's house`.
+Now let's see an example of a phrase that has more than one parse.
+Parse `all wine's house`:
 ```
  ! ?- rec[yvela,ghvinis,saxli].
 
@@ -140,10 +146,12 @@ Do you want to try for more solutions? (return for <yes>) yes
 
 no
 ```
-Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*. 
+Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*:
+<img src="img/[yvela,ghvinis,saxli]_1.png" height="256"/>
+<img src="img/[yvela,ghvinis,saxli]_2.png" height="256"/>
 
 
-# Referecne
+# Reference
 
 If you use GeoGram, cite the following work:
 
