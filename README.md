@@ -6,7 +6,20 @@ An animated visualization of the sampel parse with the [`Gralej`](https://code.g
 <img src="img/chven_vdumvarth.gif" height="512"/>
 <img src="img/[chven,vdumvarth].png" height="512"/>
 
-# GeoGram versions
+___
+### Table of content
+* [Georgram versions](#versions)
+* [TRALE installation](#installation)
+* [Running the GeoGram grammar](#running)
+  * [Run TRALE](#run_trale)
+  * [Compile the grammar](#compile)
+  * [Test on the test suite & explore parses](#test)
+  * [Parse a custom input](#parse_1)
+  * [Prasing ambiguity](#parse_2)
+* [Reference](#reference)
+
+___
+# GeoGram versions <a name="versions"/>
 GeoGram is presented as six nested grammars -- starting from the initial grammar `gr1` and ending with the final grammar `gr6`. The next version adds new components to the previous version.
 Such organization is mainly motivated for teaching purposes. 
 
@@ -21,7 +34,7 @@ Short descriptions and relations between these versions of GeoGram:
 **Use the last version if you are only interested in the most complete version of GeoGram.**
 
 
-# Installation
+# TRALE installation <a name="installation"/>
 Before you run the grammar, you need to install TRALE.
 TRALE is a system for parsing, logic programming and constraint resolution with typed feature structures in a manner roughly consistent with their use in Head-driven Phrase Structure Grammar (HPSG).
 
@@ -33,10 +46,11 @@ There are several ways to install TRALE depending on your machine and availabili
 More details about the installation (and running grammars) can be found in [this comprehensive instructions](http://utkl.ff.cuni.cz/%7Erosen/public/trale.pdf) by Alexandr Rosen (copy of it is also located in `docs/`). 
 
 
-# Running the GeoGram grammar
+# Running the GeoGram grammar <a name="running"/>
 
 These commands are tested on the standalone TRALE.
 
+<a name="run_trale"/>
 Go to the directory where `theory.pl` of the grammar you want to run is located
 and execute TRALE with `s`hell mode, `g`raphical interface, and from stabnd`a`lone executable. 
 ```
@@ -58,12 +72,18 @@ PIs: Detmar Meurers (OSU), Gerald Penn (Univ. Toronto), Frank Richter (Univ. Tï¿
 All rights reserved
 
  ! ?-
- ```
+```
+
 For the meaning of flags, run `trale -h`.
-Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface: <img src="img/Gralej_empty.png" height="50"/>
+Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface:
+
+<img src="img/Gralej_empty.png" height="100"/>
+
 ___
-Compile the grammar.
- ```
+<a name="compile"/>
+Compile the grammar:
+
+```
  ! ?- c.
 Reading signature file...
 signature
@@ -90,7 +110,9 @@ Compiling empty categories and phrase structure rules...
 
 yes
 ```
+
 ___
+<a name="test"/>
 Run the grammar on the test suite. It should pass all the tests (more than 1,000 tests).
 ```
  ! ?- test(all).
@@ -110,13 +132,18 @@ Run the grammar on the test suite. It should pass all the tests (more than 1,000
 
 yes
 ```
-The screenshot shows all parsed phrases from the test suite: <img src="img/Gralej_test_all.png" height="50"/>
 
-You can select any phrase from the list and explore it: <img src="img/chven_vdumvarth.gif" height="150"/>
+The screenshot shows all parsed phrases from the test suite, where You can select any phrase from the list and explore it:
+
+<img src="img/Gralej_test_all.png" height="256"/>
+<img src="img/chven_vdumvarth.gif" height="256"/>
+
 ___
+<a name="parse_1"/>
 Parse a custom phrase. Note that the `lexicon.pl` should cover the vocabulary of the phrase, otherwise parsing will fail.
-In the example, the grammar parses `my dog likes all women's some kid`.
+In the example, the grammar parses `my dog likes each woman's some kid`.
 There is only one parse of the sentence found.
+
 ```
  ! ?- rec[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].
 
@@ -128,10 +155,16 @@ Do you want to try for more solutions? (return for <yes>) yes
 
 no
 ```
-This is the screenshot of the full parse tree: <img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>
+
+This is the screenshot of the full parse tree:
+
+<img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>
+
 ___
+<a name="parse_2"/>
 Now let's see an example of a phrase that has more than one parse.
 Parse `all wine's house`:
+
 ```
  ! ?- rec[yvela,ghvinis,saxli].
 
@@ -146,12 +179,13 @@ Do you want to try for more solutions? (return for <yes>) yes
 
 no
 ```
+
 Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*:
 <img src="img/[yvela,ghvinis,saxli]_1.png" height="256"/>
 <img src="img/[yvela,ghvinis,saxli]_2.png" height="256"/>
 
 
-# Reference
+# Reference <a name="reference"/>
 
 If you use GeoGram, cite the following work:
 
