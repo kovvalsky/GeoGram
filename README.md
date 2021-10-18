@@ -2,9 +2,9 @@
 An HPSG-based Formal Grammar of a Core Fragment of Georgian Implemented in TRALE.
 
 This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf).
-The presentation slides of the thesis defense are [here](docs/GeoGram-presentation.pdf).
+The presentation slides of the thesis defence are [here](docs/GeoGram-presentation.pdf).
 
-An animated visualization of the sampel parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
+An animated visualization of the sample parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
 
 <img src="img/chven_vdumvarth.gif" height="512"/> <img src="img/[chven,vdumvarth].png" height="512"/>
 
