@@ -3,6 +3,7 @@ An HPSG-based Formal Grammar of a Core Fragment of Georgian Implemented in TRALE
 This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf).
 The presentation sldies of the thesis are [here](docs/GeoGram-presentation.pdf).
 
+
 # GeoGram versions
 GeoGram is presented as six nested grammars -- starting from the initial grammar `gr1` and ending with the final grammar `gr6`. The next version adds new components to the previous version.
 Such organization is mainly motivated for teaching purposes. 
@@ -33,5 +34,17 @@ More details about the installation (and running grammars) can be found in [this
 # Running the GeoGram grammar
 
 
+# Referecne
 
+If you use GeoGram, cite the following work:
+
+```
+@MastersThesis{Abzianidze:thesis:2011,
+    author  = "Abzianidze, Lasha",
+    title   = "An {HPSG}-based Formal Grammar of a Core Fragment of {Georgian} Implemented in {TRALE}",
+    school  = "{C}harles {U}niversity in {P}rague",
+    address = "the {C}zech {R}epublic",
+    year    = 2011
+    }
+```
  
