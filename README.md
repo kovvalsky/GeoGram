@@ -3,8 +3,9 @@ An HPSG-based Formal Grammar of a Core Fragment of Georgian Implemented in TRALE
 This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf).
 The presentation slides of the thesis are [here](docs/GeoGram-presentation.pdf).
 An animated visualization of the sampel parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
-<img src="img/chven_vdumvarth.gif" height="512"/>
-<img src="img/[chven,vdumvarth].png" height="512"/>
+
+<img src="img/chven_vdumvarth.gif" height="450"/>
+<img src="img/[chven,vdumvarth].png" height="450"/>
 
 ___
 ### Table of content
@@ -130,7 +131,7 @@ Run the grammar on the test suite. It should pass all the tests (more than 1,000
 yes
 ```
 
-The screenshot shows all parsed phrases from the test suite, where You can select any phrase from the list and explore it:
+The screenshot shows all parsed phrases from the test suite, where you can select any phrase from the list and explore it:
 
 <img src="img/Gralej_test_all.png" height="256"/>
 <img src="img/chven_vdumvarth.gif" height="256"/>
@@ -177,6 +178,7 @@ no
 ```
 
 Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*:
+
 <img src="img/[yvela,ghvinis,saxli]_1.png" height="256"/>
 <img src="img/[yvela,ghvinis,saxli]_2.png" height="256"/>
 
