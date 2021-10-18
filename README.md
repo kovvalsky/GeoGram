@@ -50,8 +50,7 @@ More details about the installation (and running grammars) can be found in [this
 
 These commands are tested on the standalone TRALE.
 
-<a name="run_trale"/>
-Go to the directory where `theory.pl` of the grammar you want to run is located
+Go to the directory where `theory.pl` of the grammar you want to run is located <a name="run_trale"/> 
 and execute TRALE with `s`hell mode, `g`raphical interface, and from stabnd`a`lone executable. 
 ```
 $ cd GeoGram/gr6
@@ -80,8 +79,7 @@ Running TRALE with graphical interface, you should see an additional window. In 
 <img src="img/Gralej_empty.png" height="100"/>
 
 ___
-<a name="compile"/>
-Compile the grammar:
+Compile the grammar: <a name="compile"/>
 
 ```
  ! ?- c.
@@ -112,8 +110,7 @@ yes
 ```
 
 ___
-<a name="test"/>
-Run the grammar on the test suite. It should pass all the tests (more than 1,000 tests).
+Run the grammar on the test suite. It should pass all the tests (more than 1,000 tests). <a name="test"/> 
 ```
  ! ?- test(all).
  (1)    studenti kithxulobs tcigns  % The student reads the book
@@ -139,8 +136,8 @@ The screenshot shows all parsed phrases from the test suite, where You can selec
 <img src="img/chven_vdumvarth.gif" height="256"/>
 
 ___
-<a name="parse_1"/>
-Parse a custom phrase. Note that the `lexicon.pl` should cover the vocabulary of the phrase, otherwise parsing will fail.
+Parse a custom phrase. <a name="parse_1"/>
+Note that the `lexicon.pl` should cover the vocabulary of the phrase, otherwise parsing will fail.
 In the example, the grammar parses `my dog likes each woman's some kid`.
 There is only one parse of the sentence found.
 
@@ -161,8 +158,7 @@ This is the screenshot of the full parse tree:
 <img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>
 
 ___
-<a name="parse_2"/>
-Now let's see an example of a phrase that has more than one parse.
+Now let's see an example of a phrase that has more than one parse. <a name="parse_2"/>
 Parse `all wine's house`:
 
 ```
