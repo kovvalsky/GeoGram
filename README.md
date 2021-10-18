@@ -12,6 +12,7 @@ ___
 ### Table of content
 * [Georgram versions](#versions)
 * [TRALE installation](#installation)
+* [TRALE docs](#trale_docs)
 * [Running the GeoGram grammar](#running)
   * [Run TRALE](#run_trale)
   * [Compile the grammar](#compile)
@@ -46,6 +47,12 @@ There are several ways to install TRALE depending on your machine and availabili
 * [Standalone TRALE](https://hpsg.hu-berlin.de/Software/Trale/) - a version that does not need commercial Sicstus Prolog but does need Linux OS. This version of TRALE was used during the development of GeoGram.
 
 More details about the installation (and running grammars) can be found in [this comprehensive instructions](http://utkl.ff.cuni.cz/%7Erosen/public/trale.pdf) by Alexandr Rosen (copy of it is also located in `docs/`). 
+
+# TRALE docs <a name="trale_docs"/>
+If you want to know more about TRALE, have a look at these docs:
+* [ALE - The Attribute Logic Engine User's Guide with TRALE extensions](http://www.ale.cs.toronto.edu/docs/man/ale_trale_manual.pdf)
+* [TRALE Reference Manual (Draft)](http://www.ale.cs.toronto.edu/docs/ref/ale_ref.pdf)
+* [Trale Milca Environment v.2.5.0 User's Manual (Draft)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.517.737&rep=rep1&type=pdf)
 
 
 # Running the GeoGram grammar <a name="running"/>
