@@ -33,6 +33,115 @@ More details about the installation (and running grammars) can be found in [this
 
 # Running the GeoGram grammar
 
+These command are tested on the standalone TRALE.
+Go to the directory where `theory.pl` of the grammar you want to run is located
+and execute TRALE with `s`hell mode, `g`raphical interface, and from stabnd`a`lone executable. 
+```
+$ cd GeoGram/gr6
+$ trale -sag
+Using Trale system found in $TRALE_PATH 
+Starting Trale (no saved state) from sources and the gralej interface
+   Starting gralej interface . started on 5001 of host localhost
+   Starting standalone version of Trale (standalone-trale.Linux)
+Loading Interface connection specifications (options -g):
+
+Establishing connection to interface on port 5001 of localhost.
+Connection established.
+
+
+TRALE Milca environment (version 2.7.12)
+Copyright (C) 2002/3 Project MILCA A4
+PIs: Detmar Meurers (OSU), Gerald Penn (Univ. Toronto), Frank Richter (Univ. T�bingen)
+All rights reserved
+
+ ! ?-
+ ```
+For the meaning of flags, run `trale -h`.
+Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface.
+___
+Compile the grammar.
+ ```
+  ! ?- c.
+Reading signature file...
+signature
+Compiling type unification...
+{ALE: Warning: unary branch from arg_npn to arg_noun}
+{ALE: Warning: assuming the following types are maximally specific: abl1 abl2 adj_ adj_i adj_lex adv ah_phrase arg_noun attrib ben both cat ch_phrase cnst com comps conj1 conj2 conj3 dat dat_c decl_a decl_e decl_i decl_ou dynamic e_lex e_list erg erg_c frame fut gen hc_phrase ine ins loc minus n_poss na ne_list nom nom_c noun_lex ori per1 per2 per3 plur plus pn_poss pnp_q poss_noun poss_pn prs psc pst qnt_ qnt_i qnt_lex quant sing static stative ter unspec verb verb_lex verb_val word }
+Compiling appropriateness...
+{ALE: Warning: homomorphism condition fails for case in adjunct and noun}
+{ALE: Warning: homomorphism condition fails for case in noun and adjunct}
+{ALE: Warning: homomorphism condition fails for case in noun and poss_npn}
+{ALE: Warning: homomorphism condition fails for case in poss_npn and noun}
+Compiling extensionality declarations...
+Compiling subtype covering constraints...
+Compiling functional and macro descriptions...
+Compiling type constraints...
+Compiling most general satisfiers...
+Compiling type promotion...
+Compiling feature selection...
+Compiling unification...
+Compiling definite clauses...
+Compiling lexical rules...
+Compiling lexicon...
+Compiling empty categories and phrase structure rules...
+
+yes
+```
+___
+Run the grammar on the test suite. It should pass all the tests (more than 1,000 tests).
+```
+ ! ?- test(all).
+ (1)    studenti kithxulobs tcigns  % The student reads the book
+ ==>    0.010 sec CPU time.        1 solutions (ok); 6 passive edges; residues: 0
+
+ (2)    studentebi kithxuloben tcignebs  % students reads books
+ ==>    0.010 sec CPU time.        1 solutions (ok); 6 passive edges; residues: 0
+  .
+  .
+  .
+ (1393) chven vdumvarth  
+ ==>    0.000 sec CPU time.        1 solutions (ok); 5 passive edges; residues: 5
+
+ (1394) enatrebodath patara lamazi dzaghli  
+ ==>    0.000 sec CPU time.        1 solutions (ok); 12 passive edges; residues: 5
+
+yes
+```
+___
+Parse a custom phrase. Note that the `lexicon.pl` should cover the vocabulary of the pharse, otherwise parsing will obviously fail.
+In the example, the grammar parses `my dog likes all women's some kid`.
+There is only one parse of the sentence found.
+```
+ ! ?- rec[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].
+
+STRING: 
+0 chemi 1 dzaghli 2 uyvars 3 yvela 4 qalis 5 zogierth 6 bavshvs 7
+
+Do you want to try for more solutions? (return for <yes>) yes
+
+
+no
+```
+This is the screenshot of the parse.
+___
+Now let's see an example of a phrase that has more than one parses.
+Parse `all wine's house`.
+```
+ ! ?- rec[yvela,ghvinis,saxli].
+
+STRING: 
+0 yvela 1 ghvinis 2 saxli 3
+
+Do you want to try for more solutions? (return for <yes>) yes
+
+
+Do you want to try for more solutions? (return for <yes>) yes
+
+
+no
+```
+Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*. 
+
 
 # Referecne
 
