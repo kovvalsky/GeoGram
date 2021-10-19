@@ -6,7 +6,7 @@ The presentation slides of the thesis defence are [here](docs/GeoGram-presentati
 
 An animated visualization of the sample parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
 
-<img src="img/chven_vdumvarth.gif" height="512"/> <img src="img/[chven,vdumvarth].png" height="512"/>
+[<img src="img/chven_vdumvarth.gif" height="512"/>](img/chven_vdumvarth.gif) [<img src="img/[chven,vdumvarth].png" height="512"/>](img/[chven,vdumvarth].png)
 
 ___
 ### Table of content
@@ -85,7 +85,7 @@ All rights reserved
 For the meaning of flags, run `trale -h`.
 Running TRALE with graphical interface, you should see an additional window. In the screenshot `Gralej` is used for graphical interface:
 
-<img src="img/Gralej_empty.png" height="100"/>
+[<img src="img/Gralej_empty.png" height="100"/>](img/Gralej_empty.png)
 
 ___
 Compile the grammar: <a name="compile"/>
@@ -141,8 +141,8 @@ yes
 
 The screenshot shows all parsed phrases from the test suite, where you can select any phrase from the list and explore it:
 
-<img src="img/Gralej_test_all.png" height="256"/>
-<img src="img/chven_vdumvarth.gif" height="256"/>
+[<img src="img/Gralej_test_all.png" height="256"/>](img/Gralej_test_all.png)
+[<img src="img/chven_vdumvarth.gif" height="256"/>](img/chven_vdumvarth.gif)
 
 ___
 Parse a custom phrase. <a name="parse_1"/>
@@ -164,7 +164,7 @@ no
 
 This is the screenshot of the full parse tree:
 
-<img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>
+[<img src="img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png" height="300"/>](img/[chemi,dzaghli,uyvars,yvela,qalis,zogierth,bavshvs].png)
 
 ___
 Now let's see an example of a phrase that has more than one parse. <a name="parse_2"/>
@@ -187,8 +187,8 @@ no
 
 Two parses of the phrase are `(all wine)'s house` meaning *house of all wine* and `all (wine's house)` meaning *all wine houses*:
 
-<img src="img/[yvela,ghvinis,saxli]_1.png" height="256"/>
-<img src="img/[yvela,ghvinis,saxli]_2.png" height="256"/>
+[<img src="img/[yvela,ghvinis,saxli]_1.png" height="256"/>](img/[yvela,ghvinis,saxli]_1.png)
+[<img src="img/[yvela,ghvinis,saxli]_2.png" height="256"/>](img/[yvela,ghvinis,saxli]_2.png)
 
 
 # Reference <a name="reference"/>
