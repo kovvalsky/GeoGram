@@ -1,7 +1,7 @@
 # GeoGram
 An HPSG-based Formal Grammar of a Core Fragment of Georgian Implemented in TRALE.
 
-This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf).
+This is a part of an [MSc thesis](docs/Thesis%20-%20HPSG%20for%20Georgian.pdf) ([official page](https://dspace.cuni.cz/handle/20.500.11956/48423)).
 The presentation slides of the thesis defence are [here](docs/GeoGram-presentation.pdf).
 
 An animated visualization of the sample parse with the [`Gralej`](https://code.google.com/archive/p/gralej/) graphical interface:
